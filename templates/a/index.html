@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% block title %} Home{% endblock title %} 
+{% block body %}
+<style>
+    #one:hover{
+        background: #6aa0f1;
+        color: aliceblue;
+    }
+    #two:hover{
+        background: #bbad13c7;
+        color: aliceblue;
+    }
+    #three:hover{
+        background: #f08e16;
+        color: aliceblue;
+    }
+    #four:hover{
+        background: #794fcc;
+        color: aliceblue;
+    }
+    #five:hover{
+        background: #bd6958;
+        color: aliceblue;
+    }
+    #six:hover{
+        background: #d155b2;
+        color: aliceblue;
+    }
+</style>
+<div class="container my-5">
+    <h1 style="text-align: center; color: #080200;">Tell us what we can do for you</h1>
+</div>
+
+<div class="container">
+    <div class="container my-5">
+        <div class="row">
+            <div class="card col-auto mx-auto" style="width: 18rem;" id="one">
+                <div class="card-body">
+                    <h5 class="card-title">Show records</h5>
+                    <p class="card-text">Get the records of new and old users.</p>
+                    <a href="{{ url_for('a_records') }}" class="btn btn-outline-dark">Go ahead</a>
+                </div>
+            </div>
+            <div class="card col-auto mx-auto" style="width: 18rem;" id="two">
+                <div class="card-body">
+                    <h5 class="card-title">View the metro map</h5>
+                    <p class="card-text">View the route of metro and it's destinations.</p>
+                    <a href="https://drive.google.com/file/d/1BkD7atryKooxmPfyQ26E54W5BxqgSWCM/view?usp=sharing"
+                        target="_blank" class="btn btn-outline-dark">Go ahead</a>
+                </div>
+            </div>
+            <div class="card col-auto mx-auto" style="width: 18rem;" id="three">
+                <div class="card-body">
+                    <h5 class="card-title">View Attendance</h5>
+                    <p class="card-text">Get the attendance of employees.</p>
+                    <a href="{{ url_for('a_attendance')}}" class="btn btn-outline-dark">Go ahead</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="card col-auto mx-auto" style="width: 18rem;" id="four">
+                <div class="card-body">
+                    <h5 class="card-title">Get you a token</h5>
+                    <p class="card-text">Book a token while being seated at home.</p>
+                    <a href="{{ url_for('a_token') }}" class="btn btn-outline-dark">Go ahead</a>
+                </div>
+            </div>
+
+            <div class="card col-auto mx-auto" style="width: 18rem;" id="five">
+                <div class="card-body">
+                    <h5 class="card-title">Get you a card</h5>
+                    <p class="card-text">Get a card while being seated at home.</p>
+                    <a href="{{ url_for('a_card') }}" class="btn btn-outline-dark">Go ahead</a>
+                </div>
+            </div>
+
+            <div class="card col-auto mx-auto" style="width: 18rem;" id="six">
+                <div class="card-body">
+                    <h5 class="card-title">Salary</h5>
+                    <p class="card-text">Pay salary to an employee.</p>
+                    <a href="{{ url_for('a_salary') }}" class="btn btn-outline-dark">Go ahead</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+{% endblock body %}

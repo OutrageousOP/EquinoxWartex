@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %} Attendance{% endblock title %} 
+{% block body %}
+<div class="container my-5">
+    <h1 class="mb-4">Fill this form for your attendance to get updated</h1>
+    <form class="row g-3" autocomplete="off" method='POST'>
+        <div class="col-md-6">
+            <label class="form-label">Your Username</label>
+            <input type="text" name="uname" class="form-control">
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Your DOB</label>
+            <input type="date" name="dob" class="form-control">
+        </div>
+        <div class="col-6">
+            <label class="form-label">Department Name</label>
+            <input type="text" name="d_name" class="form-control">
+        </div>
+        <div class="col-6">
+            <label class="form-label">Your Department ID </label>
+            <input type="text" name="d_id" class="form-control" >
+        </div>
+        <div class="col-6">
+            <label class="form-label">Your Employee ID</label>
+            <input type="text" name="emp_id" class="form-control">
+        </div>
+
+        <div class="col-3">
+            <label class="form-label">Date</label>
+            <input type="date" name="date" class="form-control">
+        </div>
+
+        <div class="col-3">
+            <label class="form-label">Day</label>
+            <select name="day" class="form-select">
+                <option value="monday">Monday</option>
+                <option value="tuesday">Tuesday</option>
+                <option value="wednesday">Wednesday</option>
+                <option value="thursday">Thursday</option>
+                <option value="friday">Friday</option>
+                <option value="saturday">Saturday</option>
+            </select>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-outline-dark" style="margin-left: 93%;">Submit</button>
+        </div>
+    </form>
+</div>
+{% endblock body %}

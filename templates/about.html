@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %} About{% endblock title %} 
+{% block body %}
+<div class="container my-3">
+    <h2 style="text-align: center;" class="my-5">"At your service At your will"</h2>
+    <p>Delhi Metro Management, aka, DMM has done a commendable job of personifying their team and organization. DMM aims to provide top notch service to it's customer at it's best and at their will. The metro services as per GOI is helping each and every user to get enough facilities while being at home. At DMM, we aim to work for the people and ease their travel related problems. From past few years, we have succesfully satisfied our customers, partners and clients and will continue to do so. Our endless efforts will be dedicated to our customers, eventually fullfilling goal of the government "Digital India". </p>
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="8000">
+            <img src="{{ url_for('static',filename='pcs/one.jpg') }}" class="d-block w-100">
+          </div>
+          <div class="carousel-item" data-bs-interval="8000">
+            <img src="{{ url_for('static',filename='pcs/two.jpg') }}" class="d-block w-100" >
+          </div>
+          <div class="carousel-item" data-bs-interval="8000">
+            <img src="{{ url_for('static',filename='pcs/three.jpg') }}" class="d-block w-100">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+</div>
+{% endblock body %}

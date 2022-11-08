@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %} Card{% endblock title %} 
+{% block body %}
+<div class="container my-5">
+    <h1 class="mb-4">Let's get you a card</h1>
+    <form class="row g-3" method='POST' autocomplete="off">
+        <div class="col-md-6">
+            <label class="form-label">Your Username</label>
+            <input type="text" name="uname" class="form-control">
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Your DOB</label>
+            <input type="date" name="dob" class="form-control">
+        </div>
+        <div class="col-6">
+            <label class="form-label">Address</label>
+            <input type="text" name="add" class="form-control">
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">City</label>
+            <input type="text" name="city" class="form-control">
+        </div>
+        <div class="col-12">
+            <label class="form-label">Amount</label>
+            <input type="text" name="amt" class="form-control"  placeholder="(₹200 - ₹3000)">
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-outline-dark" style="margin-left: 93%;">Submit</button>
+        </div>
+    </form>
+</div>
+
+{% endblock body %}

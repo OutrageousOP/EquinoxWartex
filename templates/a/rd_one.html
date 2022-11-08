@@ -1,0 +1,203 @@
+{% extends 'base.html' %}
+{% block title %} Records{% endblock title %}
+{% block body %}
+<div class="container-fluid my-5">
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Show users records
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <div class="container-fluid">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">SNo</th>
+                                    <th scope="col">First_Name</th>
+                                    <th scope="col">Last_Name</th>
+                                    <th scope="col">Username</th>
+                                    <th scope="col">Password</th>
+                                    <th scope="col">Address</th>
+                                    <th scope="col">Gender</th>
+                                    <th scope="col">Designation</th>
+                                    <th scope="col">Date and Time created</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for test in alltest %}
+                                <tr>
+                                    <td>{{test.SNo}}</td>
+                                    <td>{{test.First_Name}}</td>
+                                    <td>{{test.Last_Name}}</td>
+                                    <td>{{test.Username}}</td>
+                                    <td>{{test.Password}}</td>
+                                    <td>{{test.Address}}</td>
+                                    <td>{{test.Gender}}</td>
+                                    <td>{{test.Designation}}</td>
+                                    <td>{{test.Date_created}}</td>
+
+                                </tr>
+                                {% endfor %}
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Show order details - TOKEN
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <div class="container-fluid">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Username</th>
+                                    <th scope="col">DOB</th>
+                                    <th scope="col">Address</th>
+                                    <th scope="col">City</th>
+                                    <th scope="col">Initial_station</th>
+                                    <th scope="col">Final_station</th>
+                                    <th scope="col">Date Requested</th>
+                                    <th scope="col">Designation</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for test in alltest1 %}
+                                <tr>
+                                    <td>{{test.Username}}</td>
+                                    <td>{{test.DOB}}</td>
+                                    <td>{{test.Address}}</td>
+                                    <td>{{test.City}}</td>
+                                    <td>{{test.Initial }}</td>
+                                    <td>{{test.Final}}</td>
+                                    <td>{{test.Date_requested}}</td>
+                                    <td>{{test.Designation}}</td>
+                                </tr>
+                                {% endfor %}
+
+                                {% for test1 in alltest3 %}
+                                <tr>
+                                    <td>{{test1.Username}}</td>
+                                    <td>{{test1.DOB}}</td>
+                                    <td>{{test1.Address}}</td>
+                                    <td>{{test1.City}}</td>
+                                    <td>{{test1.Initial }}</td>
+                                    <td>{{test1.Final}}</td>
+                                    <td>{{test1.Date_requested}}</td>
+                                    <td>{{test1.Designation}}</td>
+
+                                </tr>
+                                {% endfor %}
+
+                                {% for test2 in alltest5 %}
+                                <tr>
+                                    <td>{{test2.Username}}</td>
+                                    <td>{{test2.DOB}}</td>
+                                    <td>{{test2.Address}}</td>
+                                    <td>{{test2.City}}</td>
+                                    <td>{{test2.Initial }}</td>
+                                    <td>{{test2.Final}}</td>
+                                    <td>{{test2.Date_requested}}</td>
+                                    <td>{{test2.Designation}}</td>
+
+                                    
+                                </tr>
+                                {% endfor %}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Show order details - CARD
+                </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <div class="container-fluid">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Username</th>
+                                    <th scope="col">DOB</th>
+                                    <th scope="col">Address</th>
+                                    <th scope="col">City</th>
+                                    <th scope="col">Amount</th>
+                                    <th scope="col">Date Requested</th>
+                                    <th scope="col">Designation</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for test in alltest2 %}
+                                <tr>
+                                    <td>{{test.Username}}</td>
+                                    <td>{{test.DOB}}</td>
+                                    <td>{{test.Address}}</td>
+                                    <td>{{test.City}}</td>
+                                    <td>{{test.Amount}}</td>
+                                    <td>{{test.Date_requested}}</td>
+                                    <td>{{test.Designation}}</td>
+                                </tr>
+                                {% endfor %}
+
+                                {% for test in alltest4 %}
+                                <tr>
+                                    <td>{{test.Username}}</td>
+                                    <td>{{test.DOB}}</td>
+                                    <td>{{test.Address}}</td>
+                                    <td>{{test.City}}</td>
+                                    <td>{{test.Amount}}</td>
+                                    <td>{{test.Date_requested}}</td>
+                                    <td>{{test.Designation}}</td>
+                                </tr>
+                                {% endfor %}
+
+                                {% for test in alltest6 %}
+                                <tr>
+                                    <td>{{test.Username}}</td>
+                                    <td>{{test.DOB}}</td>
+                                    <td>{{test.Address}}</td>
+                                    <td>{{test.City}}</td>
+                                    <td>{{test.Amount}}</td>
+                                    <td>{{test.Date_requested}}</td>
+                                    <td>{{test.Designation}}</td>
+
+                                    
+                                </tr>
+                                {% endfor %}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+        </div>
+    </div>
+    <div class="alert alert-primary my-5 container" role="alert">
+        Note : If new records don't show up, try reloading the page
+    </div>
+</div>
+{% endblock body %}

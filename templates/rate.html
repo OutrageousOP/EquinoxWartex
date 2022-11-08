@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %} Rate{% endblock title %} 
+{% block body %}
+<div class="container my-5">
+    <div class="form-floating">
+        Please leave your valuable feedback here
+        <form method='POST' autocomplete="off">
+            <textarea class="form-control" id="floatingTextarea2" required style="height: 100px" name="feedback"></textarea>
+            <button type="submit" href="/" class="btn btn-outline-dark my-4" style="margin-left: 93%;">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock body %}

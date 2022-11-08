@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% block title %} Actions{% endblock title %}
+{% block body %}
+<div class="container my-4">
+  <form action='/c/actions' method='POST' autocomplete="off">
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-default">Your Username</span>
+      <input type="text" class="form-control" aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-default" name="username">
+    </div>
+    <button type="submit" class="btn btn-outline-dark">Submit</button>
+  </form>
+</div>
+
+<table class="table container">
+  <thead>
+    <tr>
+      <th scope="col">SNo</th>
+      <th scope="col">Title</th>
+      <th scope="col">Description</th>
+      <th scope="col">Time</th>
+      <th scope="col">Actions</th>
+      <th scope="col">QR Code</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for a in act %}
+    <tr>
+      <th scope="row">{{loop.index}}</th>
+      <td>Token</td>
+      <td>You ordered a token</td>
+      <td>{{a.Date_requested}}</td>
+      <td>
+        <a type="button" href="/c/delete_token/{{a.SNo}}" class="btn btn-outline-dark btn-sm mx-1">Cancel</button>
+        </a>
+      </td>
+      <td>
+        <div class="btn-group">
+          <button type="button" class="btn btn-outline-dark btn-sm dropdown-toggle" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Click Here
+          </button>
+          <ul class="dropdown-menu">
+            <li><a>
+                <img src="{{url_for('static',filename='pcs/qrcode.png')}}" style="width: 70%;">
+              </a></li>
+          </ul>
+        </div>
+      </td>
+
+    </tr>
+    {% endfor %}
+    {% for a1 in act1 %}
+    <tr>
+      <th scope="row">{{loop.index+1}}</th>
+      <td>Card</td>
+      <td>You ordered a card</td>
+      <td>{{a1.Date_requested}}</td>
+      <td>
+        <a type="button" href="/c/delete_card/{{a1.SNo}}" class="btn btn-outline-dark btn-sm mx-1">Cancel</button>
+      </td>
+      <td>
+        <div class="btn-group">
+          <button type="button" class="btn btn-outline-dark btn-sm dropdown-toggle" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Click Here
+          </button>
+          <ul class="dropdown-menu">
+            <li><a>
+              <img src="{{url_for('static',filename='pcs/qrcode1.png')}}" style="width: 70%;">
+              </a></li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+
+    {% endfor %}
+  </tbody>
+</table>
+<div class="alert alert-primary container my-5" role="alert">
+  Note : If your records disappear after you cancel them, submit the username again
+</div>
+{% endblock body %}

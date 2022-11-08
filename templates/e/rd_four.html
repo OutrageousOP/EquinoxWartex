@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %} Token{% endblock title %} 
+{% block body %}
+<div class="container my-5">
+    <h1 class="mb-4">Let's get you a token</h1>
+    <form class="row g-3" method='POST' autocomplete="off">
+        <div class="col-md-6">
+            <label class="form-label">Your username</label>
+            <input type="text" name="uname" class="form-control">
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Your DOB</label>
+            <input type="date" name="dob" class="form-control">
+        </div>
+        <div class="col-6">
+            <label class="form-label">Address</label>
+            <input type="text" name="add" class="form-control">
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">City</label>
+            <input type="text" name="city" class="form-control" id="floatingInput">
+        </div>
+        <div class="col-6">
+            <label class="form-label">From </label>
+            <input type="text" name="in_s" class="form-control" placeholder="Inital station">
+        </div>
+        <div class="col-6">
+            <label class="form-label">To</label>
+            <input type="text" name="fi_s" class="form-control" placeholder="Final station">
+        </div>
+
+        <div class="col-12">
+            <button type="submit" class="btn btn-outline-dark" style="margin-left: 93%;">Submit</button>
+        </div>
+    </form>
+</div>
+
+{% endblock body %}

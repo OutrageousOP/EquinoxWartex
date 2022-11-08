@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %} Attendance{% endblock title %} 
+{% block body %}
+<div class="container my-5">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">SNo</th>
+        <th scope="col">Username</th>
+        <th scope="col">DOB</th>
+        <th scope="col">Dept_Name</th>
+        <th scope="col">Dept_ID</th>
+        <th scope="col">Emp_ID</th>
+        <th scope="col">Date</th>
+        <th scope="col">Day</th>
+        <th scope="col">Designation</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for test in alltest7 %}
+      <tr>
+        <th scope="row">{{loop.index}}</th>
+        <td>{{test.Username}}</td>
+        <td>{{test.DOB}}</td>
+        <td>{{test.Dept_Name}}</td>
+        <td>{{test.Dept_ID}}</td>
+        <td>{{test.Emp_ID}}</td>
+        <td>{{test.Date}}</td>
+        <td>{{test.Day}}</td>
+        <td>{{test.Designation}}</td>
+      </tr>
+
+      {% endfor %}
+    </tbody>
+  </table>
+
+
+</div>
+{% endblock body %}
